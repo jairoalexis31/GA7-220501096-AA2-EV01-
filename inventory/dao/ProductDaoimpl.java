@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDaoimpl implements ProductDao {
-    
+///FUNCIÓN DE INSERCIÓN 
     @Override
     public void insertProduct(Product product) {
         String sql = "INSERT INTO products (name, quantity, price) VALUES (?, ?, ?)";
@@ -24,6 +24,7 @@ public class ProductDaoimpl implements ProductDao {
         }
     }
 
+///FUNCIÓN DE CONSULTA
     @Override
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
@@ -45,6 +46,7 @@ public class ProductDaoimpl implements ProductDao {
         return products;
     }
 
+///FUNCIÓN DE ACTUALIZACIÓN
     @Override
     public void updateProduct(Product product) {
         String sql = "UPDATE products SET name = ?, quantity = ?, price = ? WHERE id = ?";
@@ -61,6 +63,7 @@ public class ProductDaoimpl implements ProductDao {
         }
     }
 
+///FUNCIÓN DE ELIMINACIÓN
     @Override
     public void deleteProduct(int productId) {
         String sql = "DELETE FROM products WHERE id = ?";
